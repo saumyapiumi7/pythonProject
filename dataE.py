@@ -56,12 +56,6 @@ def enter_data():
         tkinter.messagebox.showwarning(title = "Error", message = " You have not Accepted terms")
 
 
-        
-
-
-
-
-
 window = tkinter.Tk()
 window.title("Data Entry Form")
 
