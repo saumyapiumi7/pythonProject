@@ -48,7 +48,10 @@ registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered"
 registered_label.grid(row=0,column=0)
 registered_check.grid(row=1,column=0)
 
-
+numcourses_label=tkinter.Label(courses_frame, text="Completed Courses")
+numcourses_spinbox = ttk.Spinbox(courses_frame,from_ =0, to = 'infinity')
+numcourses_label.grid(row=0, column=1)
+numcourses_spinbox.grid(row=1, column= 1)
 
 
 window.mainloop()
