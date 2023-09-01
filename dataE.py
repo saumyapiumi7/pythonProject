@@ -1,6 +1,9 @@
 import tkinter
 from tkinter import ttk
 from tkinter import messagebox
+import os
+import openpyxl
+
 
 def enter_data():
     accept = accept_var.get()
@@ -27,12 +30,35 @@ def enter_data():
             print("Courses : " + numcourses, "Semesters : " + numsemesters)
             print("Registration Status : " + registration_status)
             print("================================================================")
+
+            filepath = "D:\Project\data.xlsx"
+
+            if not os.path.exists(filepath):
+                workbook = openpyxl.Workbook()
+                sheet = workbook.active
+                heading = ["First Name", "Last Name", "Title", "Age", "Nationality", 
+                           "Courses", "Semesters", "Registration Status"]
+                sheet.append(heading)
+                workbook.save(filepath)
+            workbook = openpyxl.load_workbook(filepath)
+            sheet = workbook.active
+            dataEntry = [firstname,lastname,title,age,nationality,
+                         numcourses, numsemesters, registration_status]
+            sheet.append(dataEntry)
+            workbook.save(filepath)
+
+
+
         else:
             tkinter.messagebox.showwarning(title = "Error", message = " First name and Last name required")
 
     else:
         tkinter.messagebox.showwarning(title = "Error", message = " You have not Accepted terms")
+
+
         
+
+
 
 
 
