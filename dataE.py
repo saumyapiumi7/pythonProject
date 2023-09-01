@@ -40,7 +40,15 @@ nationality_combobox.grid(row=3, column=1)
 for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
-courses_frame = tkinter.Label(frame)
+courses_frame = tkinter.LabelFrame(frame)
 courses_frame.grid(row=1, column=0, sticky="news",padx=20,pady=20)                            
+
+registered_label = tkinter.Label(courses_frame,text="Registration Status")
+registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered")
+registered_label.grid(row=0,column=0)
+registered_check.grid(row=1,column=0)
+
+
+
 
 window.mainloop()
