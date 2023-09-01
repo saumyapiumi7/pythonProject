@@ -31,7 +31,7 @@ def enter_data():
             print("Registration Status : " + registration_status)
             print("================================================================")
 
-            filepath = "D:\Projects\Python\Form\data.xlsx"
+            filepath = "D:\Project\data.xlsx"
 
             if not os.path.exists(filepath):
                 workbook = openpyxl.Workbook()
