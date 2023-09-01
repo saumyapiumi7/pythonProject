@@ -7,9 +7,9 @@ window.title("Data Entry Form")
 frame = tkinter.Frame(window)
 frame.pack()
 
-#user information
+#===============user information
 user_info_frame = tkinter.LabelFrame(frame, text="User Information")
-user_info_frame.grid(row=0, column=0, padx=20, pady=20)
+user_info_frame.grid(row=0, column=0, padx=20, pady=10)
 
 first_name_label = tkinter.Label(user_info_frame, text="First Name")
 first_name_label.grid(row=0, column=0)
@@ -40,8 +40,9 @@ nationality_combobox.grid(row=3, column=1)
 for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
+#===============courses information
 courses_frame = tkinter.LabelFrame(frame)
-courses_frame.grid(row=1, column=0, sticky="news",padx=20,pady=20)                            
+courses_frame.grid(row=1, column=0, sticky="news",padx=20,pady=10)                            
 
 registered_label = tkinter.Label(courses_frame,text="Registration Status")
 registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered")
@@ -62,11 +63,19 @@ numsemesters_spinbox.grid(row=1, column= 2)
 for widget in courses_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
+#===============terms and condition
 terms_frame = tkinter.LabelFrame(frame, text="Terms & Conditions")
-terms_frame.grid(row=2, column=0, sticky="news", padx=20, pady=20)
+terms_frame.grid(row=2, column=0, sticky="news", padx=20, pady=10)
 
 terms_check = tkinter.Checkbutton(terms_frame, text="I accept the terms and conditions")
 terms_check.grid(row=0, column=0)
+
+for widget in terms_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
+
+#===============data enter button
+button = tkinter.Button(frame, text="Enter Data")
+button.grid(row=3, column=0, sticky="news", padx=20, pady=10)
 
 
 
