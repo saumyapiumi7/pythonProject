@@ -37,6 +37,9 @@ nationality_combobox = ttk.Combobox(user_info_frame, values=["Sri Lanka","India"
 nationality_label.grid(row=2, column=1)
 nationality_combobox.grid(row=3, column=1)    
 
-                              
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
+
+                             
 
 window.mainloop()
