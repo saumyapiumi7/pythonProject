@@ -27,6 +27,13 @@ title_combobox = ttk.Combobox(user_info_frame, values=["","Mr","Miss","Mrs","Dr"
 title_label.grid(row=0, column=2)
 title_combobox.grid(row=1, column=2)
 
+age_label=tkinter.Label(user_info_frame, text="Age")
+age_spinbox = ttk.Spinbox(user_info_frame,from_ =20, to = 70)
+age_label.grid(row=2, column=0)
+age_spinbox.grid(row=3, column= 0)
+
+
+
                               
 
 window.mainloop()
