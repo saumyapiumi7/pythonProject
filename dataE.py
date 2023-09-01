@@ -32,7 +32,10 @@ age_spinbox = ttk.Spinbox(user_info_frame,from_ =20, to = 70)
 age_label.grid(row=2, column=0)
 age_spinbox.grid(row=3, column= 0)
 
-
+nationality_label=tkinter.Label(user_info_frame,text="Nationality")
+nationality_combobox = ttk.Combobox(user_info_frame, values=["Sri Lanka","India","Canada","France","Germany","Africa",])
+nationality_label.grid(row=2, column=1)
+nationality_combobox.grid(row=3, column=1)    
 
                               
 
